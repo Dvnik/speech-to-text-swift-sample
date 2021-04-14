@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mySpeech" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAM-hx-Ggg">
+                                <rect key="frame" x="107" y="64" width="200" height="60"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="b98-v4-jkT"/>
+                                    <constraint firstAttribute="height" constant="60" id="xug-kp-kks"/>
+                                </constraints>
+                                <state key="normal" title="Recored Audio"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C8A-WX-9NV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTc-Qb-4tL">
+                                <rect key="frame" x="107" y="224" width="200" height="60"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="28L-Kf-6ER"/>
+                                </constraints>
+                                <state key="normal" title="Process Recorded Audio"/>
+                                <connections>
+                                    <action selector="processAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oZX-Bw-gFV"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ssu-IM-Zc9">
+                                <rect key="frame" x="20" y="304" width="374" height="538"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEg-zX-jbB">
+                                <rect key="frame" x="107" y="144" width="200" height="60"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="eNj-KT-QH3"/>
+                                </constraints>
+                                <state key="normal" title="Stop Audio"/>
+                                <connections>
+                                    <action selector="stopAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dT3-up-hzd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YTc-Qb-4tL" firstAttribute="trailing" secondItem="AEg-zX-jbB" secondAttribute="trailing" id="4Q5-qp-ybq"/>
+                            <constraint firstItem="ssu-IM-Zc9" firstAttribute="top" secondItem="YTc-Qb-4tL" secondAttribute="bottom" constant="20" id="7xv-bI-wJX"/>
+                            <constraint firstItem="YTc-Qb-4tL" firstAttribute="top" secondItem="AEg-zX-jbB" secondAttribute="bottom" constant="20" id="8np-HT-nDP"/>
+                            <constraint firstItem="YTc-Qb-4tL" firstAttribute="leading" secondItem="AEg-zX-jbB" secondAttribute="leading" id="AHm-dF-VWS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ssu-IM-Zc9" secondAttribute="trailing" constant="20" id="BFi-vm-FRR"/>
+                            <constraint firstItem="ssu-IM-Zc9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ig0-oX-8db"/>
+                            <constraint firstItem="AEg-zX-jbB" firstAttribute="top" secondItem="xAM-hx-Ggg" secondAttribute="bottom" constant="20" id="K7Z-bO-C60"/>
+                            <constraint firstItem="AEg-zX-jbB" firstAttribute="leading" secondItem="xAM-hx-Ggg" secondAttribute="leading" id="L83-HY-cae"/>
+                            <constraint firstItem="AEg-zX-jbB" firstAttribute="trailing" secondItem="xAM-hx-Ggg" secondAttribute="trailing" id="NWh-YO-hDK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ssu-IM-Zc9" secondAttribute="bottom" constant="20" id="Svh-6C-c2U"/>
+                            <constraint firstItem="xAM-hx-Ggg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ud1-uE-q9R"/>
+                            <constraint firstItem="xAM-hx-Ggg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="yTl-Hg-1VU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="ssu-IM-Zc9" id="yYv-W2-pTQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
