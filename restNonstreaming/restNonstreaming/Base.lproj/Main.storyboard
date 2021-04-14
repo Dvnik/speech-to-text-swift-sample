@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mySpeech" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4H-BQ-kcN">
+                                <rect key="frame" x="107" y="64" width="200" height="60"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Lxe-Df-CQc"/>
+                                    <constraint firstAttribute="width" constant="200" id="RMs-mG-TL5"/>
+                                </constraints>
+                                <state key="normal" title="Record Audio"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rij-Hz-ucX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylC-18-aYS">
+                                <rect key="frame" x="107" y="144" width="200" height="60"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="06T-mw-Tyz"/>
+                                    <constraint firstAttribute="width" constant="200" id="LWw-uK-95u"/>
+                                </constraints>
+                                <state key="normal" title="Play Recorded Audio"/>
+                                <connections>
+                                    <action selector="playAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DeI-Qr-O6J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FC5-2h-ekM">
+                                <rect key="frame" x="107" y="224" width="200" height="60"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="V3a-NB-gEE"/>
+                                    <constraint firstAttribute="width" constant="200" id="wsr-Xf-G69"/>
+                                </constraints>
+                                <state key="normal" title="Stop Recording/Playing"/>
+                                <connections>
+                                    <action selector="stopAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zfJ-hX-V6z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aG7-SO-VgR">
+                                <rect key="frame" x="107" y="304" width="200" height="60"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Fli-bM-49z"/>
+                                    <constraint firstAttribute="height" constant="60" id="N86-tu-WIY"/>
+                                </constraints>
+                                <state key="normal" title="Process Recorded Audio"/>
+                                <connections>
+                                    <action selector="processAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IM7-np-v3z"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3DN-cl-5Uy">
+                                <rect key="frame" x="20" y="384" width="374" height="458"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3DN-cl-5Uy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ByK-ii-BND"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3DN-cl-5Uy" secondAttribute="trailing" constant="20" id="EVm-oA-S1Z"/>
+                            <constraint firstItem="D4H-BQ-kcN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gg0-gG-XUM"/>
+                            <constraint firstItem="ylC-18-aYS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MWN-kz-a96"/>
+                            <constraint firstItem="FC5-2h-ekM" firstAttribute="top" secondItem="ylC-18-aYS" secondAttribute="bottom" constant="20" id="Nc4-Au-frr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3DN-cl-5Uy" secondAttribute="bottom" constant="20" id="PBp-VS-IAb"/>
+                            <constraint firstItem="ylC-18-aYS" firstAttribute="top" secondItem="D4H-BQ-kcN" secondAttribute="bottom" constant="20" id="cfk-jM-jbd"/>
+                            <constraint firstItem="D4H-BQ-kcN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="htq-uO-qpZ"/>
+                            <constraint firstItem="aG7-SO-VgR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rno-XF-rVE"/>
+                            <constraint firstItem="FC5-2h-ekM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="roD-7r-ZwJ"/>
+                            <constraint firstItem="3DN-cl-5Uy" firstAttribute="top" secondItem="aG7-SO-VgR" secondAttribute="bottom" constant="20" id="ugu-CF-REK"/>
+                            <constraint firstItem="aG7-SO-VgR" firstAttribute="top" secondItem="FC5-2h-ekM" secondAttribute="bottom" constant="20" id="yQM-ge-cZ9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="3DN-cl-5Uy" id="SXD-FV-MOX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
